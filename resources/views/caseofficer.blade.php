@@ -2,11 +2,10 @@
 @section('title', '')
 @section('content')
 
-	<div class="form-parent backgroundimg">
-		<!-- <form class="container bg-white p-4 card align-self-center" style="width: 400px"> -->
-			
+	<div class="form-parent">
+		<div class="bg-white p-4 card align-self-center" style="max-width: 400px; margin: 0px auto;">	
 			<h1 class="text-center">Add Case Officer</h1>
-            <form method="POST" action="/caseofficer" autocomplete="off" style="max-width: 400px;margin: 0px auto;">
+            <form method="POST" action="/caseofficer" autocomplete="off" >
             	<input type="hidden" name="_token" value="{{csrf_token() }}">
 			<div class="form-group  {{ $errors->has('case_id') ? 'has-error' : '' }}">
 				<label>Case ID</label>
@@ -34,6 +33,7 @@
 				<input type="submit" class="btn btn-primary  btn-block" name="submit" value="Submit">
 			</div>
 		</form>
+	</div>
 	</div>
 
 

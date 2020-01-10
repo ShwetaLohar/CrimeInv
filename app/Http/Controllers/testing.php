@@ -105,10 +105,53 @@ class testing extends Controller
                 'officer_name' => 'required|min:5|max:35',
                 
             ],[
-                'case_id' => ' The Case-id field is required.',
-                'name.required' => ' These Name field is required.',
-                'officer_id' => ' The Officer-id field is required.',
-                'officer_name.required' => 'The names field is required.',
+                'case_id.required' => ' *Please enter numeric values*',
+                'name.required' => ' *PLease enter Name*',
+                'officer_id' => '*Please enter numeric values* ',
+                'officer_name.required' => '*Please enter names*',
+                
+            ]);
+
+
+        dd('You are successfully added all fields.');
+    }
+
+    public function ResultformValidationPost(Request $request)
+    {
+        $this->validate($request,[
+                'case_id' => 'required|numeric',
+                'name' => 'required|min:5|max:35',
+                'suspect' => 'required|min:5|max:35',
+                'note' => 'required|min:5|max:35',
+                
+            ],[
+                'case_id.required' => ' *Please enter numeric values*',
+                'name.required' => ' *PLease enter Name*',
+                'suspect.required' => '*Please enter numeric values* ',
+                'note.required' => '*Please enter names*',
+                
+            ]);
+
+
+        dd('You are successfully added all fields.');
+    }
+
+     public function AddCaseformValidationPost(Request $request)
+    {
+         $this->validate($request,[
+                'case_id' => 'required|numeric',
+                'name' => 'required|min:5|max:35',
+                'officer_id' => 'required|numeric',
+                'officer_name' => 'required|min:5|max:35',
+                'note' => 'required|min:5|max:35',
+
+                
+            ],[
+                'case_id.required' => ' *Please enter numeric values*',
+                'name.required' => ' *PLease enter Name*',
+                'officer_id' => '*Please enter numeric values* ',
+                'officer_name.required' => '*Please enter names*',
+                'note.required' => '*Please enter names*',
                 
             ]);
 
