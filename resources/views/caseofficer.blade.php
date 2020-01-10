@@ -9,12 +9,12 @@
             <form method="POST" action="/caseofficer" autocomplete="off">
 			<div class="form-group  {{ $errors->has('case_id') ? 'has-error' : '' }}">
 				<label>Case ID</label>
-				<input type="text" class="form-control" id="case_id" name="case_id" placeholder="Enter Case Id" required>
+				<input type="text" class="form-control" id="case_id" name="case_id" placeholder="Enter Case Id" >
 				<span class="text-danger">{{ $errors->first('case_id') }}</span>
 			</div>
 			<div class="form-group  {{ $errors->has('name') ? 'has-error' : '' }}">
 				<label>Case Name</label>
-				<input type="text" class="form-control" id="name" name="name" placeholder="Enter Case Name" required>
+				<input type="text" class="form-control" id="name" name="name" placeholder="Enter Case Name" >
 				<span class="text-danger">{{ $errors->first('name') }}</span>
 			</div>
 			<div class="form-group  {{ $errors->has('officer_id') ? 'has-error' : '' }}">

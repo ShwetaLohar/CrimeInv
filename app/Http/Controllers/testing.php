@@ -96,12 +96,12 @@ class testing extends Controller
     {
         //
     }
-    public function CaseOfficerformValidationPost(Request $request)
+    public function caseofficercerformValidationPost(Request $request)
     {
         $this->validate($request,[
-                'case_id' => 'unique:officers',
+                'case_id' => 'required|numeric',
                 'name' => 'required|min:5|max:35',
-                'officer_id' => 'unique:officers',
+                'officer_id' => 'required|numeric',
                 'officer_name' => 'required|min:5|max:35',
                 
             ],[
