@@ -3,10 +3,11 @@
 @section('content')
 
 	<div class="form-parent backgroundimg">
-		<form class="container bg-white p-4 card align-self-center" style="width: 400px">
+		<!-- <form class="container bg-white p-4 card align-self-center" style="width: 400px"> -->
 			
 			<h1 class="text-center">Add Case Officer</h1>
-            <form method="POST" action="/caseofficer" autocomplete="off">
+            <form method="POST" action="/caseofficer" autocomplete="off" style="max-width: 400px;margin: 0px auto;">
+            	<input type="hidden" name="_token" value="{{csrf_token() }}">
 			<div class="form-group  {{ $errors->has('case_id') ? 'has-error' : '' }}">
 				<label>Case ID</label>
 				<input type="text" class="form-control" id="case_id" name="case_id" placeholder="Enter Case Id" >
@@ -19,16 +20,16 @@
 			</div>
 			<div class="form-group  {{ $errors->has('officer_id') ? 'has-error' : '' }}">
 				<label>Officer ID</label>
-				<input type="text" class="form-control" id="officer_id" name="officer_id" placeholder="Enter Officer ID" required>
+				<input type="text" class="form-control" id="officer_id" name="officer_id" placeholder="Enter Officer ID">
 				<span class="text-danger">{{ $errors->first('officer_id') }}</span>
 			</div>
 			<div class="form-group  {{ $errors->has('officer_name') ? 'has-error' : '' }}">
 				<label>Officer Name</label>
-				<input type="text" class="form-control" id="officer_name" name="officer_name" placeholder="Enter Officer Name" required>
+				<input type="text" class="form-control" id="officer_name" name="officer_name" placeholder="Enter Officer Name">
 				<span class="text-danger">{{ $errors->first('officer_name') }}</span>
 			</div>
 			
-			<input type="hidden" name="_token" value="{{csrf_token()}}">
+			
 			<div class="form-group">
 				<input type="submit" class="btn btn-primary  btn-block" name="submit" value="Submit">
 			</div>
