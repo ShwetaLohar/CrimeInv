@@ -2,7 +2,7 @@
 @section('title', '')
 @section('content')
 
-	<div class="form-parent backgroundimg">
+	<div class="form-parent">
 		<form class="container bg-white p-4 card align-self-center" style="width: 400px">
 			
 			<h1 class="text-center">Add Result</h1>
