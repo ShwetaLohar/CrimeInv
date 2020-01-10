@@ -1,41 +1,35 @@
-<nav class="navbar navbar-default navbar-fixed-top ">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-          <!-- <a class="navbar-brand" href="#">Project name</a> -->
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
+<header class="navbar navbar-expand-lg navbar-dark bg-dark text-light fixed-top">
+	<a class="navbar-brand display-1">Crime Investigation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon text-secondary"></span>
+  	</button>
+    <div id="navbarNav" class="navbar-collapse collapse">
       	<ul class="nav navbar-nav">
-      		<li class="active">
-		      <a href="{{route('addcase')}}">Add Case</a>
+      		<li class="nav-item">
+		      <a class="nav-link" href="{{route('addcase')}}">Add Case</a>
 		    </li>
-		    <li>
-		      <a href="{{route('addofficer')}}">Add Officer</a>
+		    <li class="nav-item">
+		      <a class="nav-link" href="{{route('addofficer')}}">Add Officer</a>
 		    </li>
-		    <li>
-		      <a href="{{route('caseofficer')}}">Add Case Officer</a>
+		    <li class="nav-item">
+		      <a  class="nav-link" href="{{route('caseofficer')}}">Add Case Officer</a>
 		    </li>
-		     <li>
-		      <a href="">Predict Result</a>
+		     <li class="nav-item">
+		      <a class="nav-link" href="">Predict Result</a>
 		    </li>
-		    <li>
-		      <a href="{{route('index')}}">Add Result</a>
+		    <li class="nav-item">
+		      <a class="nav-link" href="{{route('index')}}">Add Result</a>
 		    </li>
-		     <li>
-		      <a href="">View Suspects</a>
+		     <li class="nav-item">
+		      <a class="nav-link" href="">View Suspects</a>
 		    </li>
-		     <li>
-		      <a href="">View Case History</a>
+		     <li class="nav-item">
+		      <a class="nav-link" href="">View Case History</a>
 		    </li>
-		     <li>
-		      <a href="">Logout</a>
+		     <li class="nav-item">
+		      <a class="nav-link" href="">Logout</a>
 		    </li>
       	</ul>
     </div>
-  	</div>
-</nav>
+</header>
 		
