@@ -13,6 +13,7 @@
 
 
 Route::get('/', 'testing@index')->name('index');
+Route::get('/home', 'testing@home')->name('home');
 Route::get('/addcase', 'testing@addcase')->name('addcase');
 Route::get('/addofficer', 'testing@addofficer')->name('addofficer');
 Route::get('/caseofficer', 'testing@caseofficer')->name('caseofficer');
@@ -21,5 +22,7 @@ Route::post('/index', 'testing@ResultformValidationPost');
 Route::post('/addcase', 'testing@AddCaseformValidationPost');
 
 
-// Route::get("/",'testing@index'); 
-// Route::post("store",'testing@store'); 
+Route::resource('result','ResultController');
+Route::resource('case','AddcaseController');
+
+ 

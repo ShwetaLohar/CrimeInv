@@ -21,6 +21,10 @@ class testing extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function home()
+    {
+        return view('home');
+    }
     public function addcase()
     {
         return view('addcase');
