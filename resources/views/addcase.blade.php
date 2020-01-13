@@ -3,6 +3,7 @@
 @section('content')
 
 	<div class="form-parent">
+		<br><br><br><br>
 		<div class="bg-white p-4 card align-self-center" style="max-width: 400px; margin: 0px auto;">
 			<h1 class="text-center">Add Case</h1>
 			

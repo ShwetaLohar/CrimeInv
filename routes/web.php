@@ -24,5 +24,8 @@ Route::post('/addcase', 'testing@AddCaseformValidationPost');
 
 Route::resource('result','ResultController');
 Route::resource('case','AddcaseController');
+Route::resource('addcofficer','CaseofficerController');
+
+
 
  
