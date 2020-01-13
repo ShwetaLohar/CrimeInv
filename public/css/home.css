@@ -1,0 +1,23 @@
+.bgimg{
+	background-image: url('../images/crime4.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height: 660px;
+
+}
+
+.hearderset{
+	padding-top: 200px;
+	box-sizing: border-box;
+}
+
+.hearderset h2{
+	font-size: 42px;
+}
+
+.hearderset h1{
+	font-size: 50px;
+	font-weight: bold;
+}
+
