@@ -11,21 +11,17 @@
 |
 */
 
-
-Route::get('/', 'testing@index')->name('index');
-Route::get('/home', 'testing@home')->name('home');
+Route::get('/', 'testing@home')->name('home');
+Route::get('/addresult', 'testing@addresult')->name('addresult');
 Route::get('/addcase', 'testing@addcase')->name('addcase');
 Route::get('/addofficer', 'testing@addofficer')->name('addofficer');
 Route::get('/caseofficer', 'testing@caseofficer')->name('caseofficer');
-Route::post('/caseofficer', 'testing@CaseOfficerformValidationPost');
+/*Route::post('/caseofficer', 'testing@CaseOfficerformValidationPost');
 Route::post('/index', 'testing@ResultformValidationPost');
-Route::post('/addcase', 'testing@AddCaseformValidationPost');
+Route::post('/addcase', 'testing@AddCaseformValidationPost');*/
 
 
 Route::resource('result','ResultController');
 Route::resource('case','AddcaseController');
 Route::resource('addcofficer','CaseofficerController');
-
-
-
- 
+Route::resource('Officer','OfficerController');

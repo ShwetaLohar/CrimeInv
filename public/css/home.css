@@ -1,10 +1,14 @@
+html {
+	scroll-behavior: smooth;
+}
+
 .bgimg{
-	background-image: url('../images/crime4.jpg');
+	background-image: url('../images/prison.jpg');
 	background-size: 100% 100%;
 	background-attachment: fixed;
+	opacity: 0.8;
 	width: 100%;
-	height: 660px;
-
+	height: 90vh;
 }
 
 .hearderset{

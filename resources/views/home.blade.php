@@ -17,8 +17,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="bgimg">
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-fixed-top">
+
+	<header class="navbar navbar-expand-md bg-dark navbar-dark navbar-top">
 		
 		<div class="container">
 			<a href="" class="navbar-brand text-warning font-weight-bold"> CRIME INVESTIGATION MANAGEMENT SYSTEM</a>
@@ -32,17 +32,14 @@
 						<a href="" class="nav-link text-white">HOME &nbsp;&nbsp;</a>
 					</li>
 					<li class="nav-item"> 
-						<a href="" class="nav-link text-white">ABOUT &nbsp;&nbsp;</a>
-					</li>
-					<li class="nav-item"> 
-						<a href="" class="nav-link text-white">CONTACT &nbsp;&nbsp;</a>
+						<a href="#about" class="nav-link text-white">ABOUT &nbsp;&nbsp;</a>
 					</li>
 				</ul>
 			</div>
-			</div>
-		</nav>
-		
+		</div>
+	</header>
 
+	<div class="bgimg">
 		<div class="container text-center text-white hearderset">
 			<h2> Welcome To Our System!!! </h2>
 			<h1> Shweta Lohar </h1>
@@ -51,7 +48,7 @@
 		</div>
 	</div>
 
-	<section class="container aboutus text-center">		
+	<section id="about" class="container aboutus text-center p-5">
      <h2>About Us</h2>
       <hr>
       <p style="line-height: 50px">
@@ -59,8 +56,10 @@
       </p>
   </section>
 
-	<footer class="w3-container w3-padding-large w3-mobile w3-center w3-row w3-black">
-		<p class="w3-half w3-center w3-mobile">&copy; Copyright 2019 Shweta Lohar - All Rights Reserved</p>
+	<footer class="p-3 border border-top">
+		<center>
+			<p>&copy; Copyright 2019 Shweta Lohar - All Rights Reserved</p>
+		</center>
 	</footer>
 
 </body>

@@ -18,7 +18,7 @@
 		      <a class="nav-link" href="">Predict Result</a>
 		    </li>
 		    <li class="nav-item">
-		      <a class="nav-link" href="{{route('index')}}">Add Result</a>
+		      <a class="nav-link" href="{{route('addresult')}}">Add Result</a>
 		    </li>
 		     <li class="nav-item">
 		      <a class="nav-link" href="">View Suspects</a>

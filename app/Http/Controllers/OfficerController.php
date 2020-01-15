@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\result;
 
-class ResultController extends Controller
+class OfficerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class ResultController extends Controller
      */
     public function index()
     {
-        //
+        return view('addofficer');
     }
 
     /**
@@ -24,7 +23,7 @@ class ResultController extends Controller
      */
     public function create()
     {
-        return view('addresult');
+        //
     }
 
     /**
@@ -36,26 +35,23 @@ class ResultController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-                'case_id' => 'required|numeric',
-                'name' => 'required|min:5|max:35',
-                'suspect' => 'required|min:5|max:35',
-                'note' => 'required|min:5|max:35',
+                'officer_id' => 'required|numeric',
+                'officer_name' => 'required|min:5|max:35',
+                'area' => 'required|min:5|max:35',
+                'address'=> 'required|min:5|max:35',
+                'mobile'=> 'required|regex:/(01)[0-9]{9}/',
+                'email' =>'required|email|max:100',
+                'image' =>'required|image',
                 
             ],[
-                'case_id.required' => ' *Please enter numeric values*',
-                'name.required' => ' *PLease enter Name*',
-                'suspect.required' => '*Please enter numeric values* ',
-                'note.required' => '*Please enter names*',
-                
+                'officer_id.required' => '*Please enter numeric values* ',
+                'officer_name.required' => '*Please enter names*',
+                'area.required'=> '*Please enter area',
+                'address.required'=>'*Please enter address',
+                'mobile.required'=>'*Please enter phone number',
+                'email.required'=> '*Please enter email ID',
+                'image.required'=> '*Please upload image file',
             ]);
-        $res = new result([
-            'case_id' => $request->get('case_id'),
-            'name' => $request->get('name'),
-            'suspect' => $request->get('suspect'),
-            'note' => $request->get('note')
-        ]);
-        $res->save();
-        return redirect()->route('addresult')->with('success','Result Submitted.');
     }
 
     /**

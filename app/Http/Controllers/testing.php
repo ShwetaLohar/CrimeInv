@@ -11,11 +11,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class testing extends Controller
 {
-    public function index()
-    {
-        return view('index');
-    }
-
     /**
      * Show the form for creating a   new resource.
      *
@@ -28,6 +23,10 @@ class testing extends Controller
     public function addcase()
     {
         return view('addcase');
+    }
+    public function addresult()
+    {
+        return view('addresult');
     }
 
     public function addofficer()

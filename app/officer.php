@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class officer extends Model
+class Officer extends Model
 {
-    protected $fillable = ['case_id','name','officer_id','officer_name']; 
+    protected $fillable = ['officer_id','officer_name','area','address','mobile','email','image'];
 }
