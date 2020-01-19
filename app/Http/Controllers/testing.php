@@ -37,6 +37,15 @@ class testing extends Controller
     {
         return view('caseofficer');
     }
+    public function AdminLogin()
+    {
+        return view('AdminLogin');
+    }
+    public function login1()
+    {
+        return view('login1');
+    }
+
 
     public function create()
     {

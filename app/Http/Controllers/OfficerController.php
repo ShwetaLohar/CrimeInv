@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Officer;
 
 class OfficerController extends Controller
 {
@@ -23,7 +24,8 @@ class OfficerController extends Controller
      */
     public function create()
     {
-        //
+        return view('addofficer');
+
     }
 
     /**
@@ -39,10 +41,10 @@ class OfficerController extends Controller
                 'officer_name' => 'required|min:5|max:35',
                 'area' => 'required|min:5|max:35',
                 'address'=> 'required|min:5|max:35',
-                'mobile'=> 'required|regex:/(01)[0-9]{9}/',
+                'mobile' => 'required|min:11|numeric',
                 'email' =>'required|email|max:100',
-                'image' =>'required|image',
-                
+                // 'image' =>'required|image',
+                'image' =>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ],[
                 'officer_id.required' => '*Please enter numeric values* ',
                 'officer_name.required' => '*Please enter names*',
@@ -52,6 +54,17 @@ class OfficerController extends Controller
                 'email.required'=> '*Please enter email ID',
                 'image.required'=> '*Please upload image file',
             ]);
+       $addof = new Officer([
+            'officer_id' => $request->get('officer_id'),
+            'officer_name' => $request->get('officer_name'),
+            'area' => $request->get('area'),
+            'address' => $request->get('address'),
+            'mobile' => $request->get('mobile'),
+            'email' => $request->get('email'),
+            'image' => $request->file('image')
+        ]);
+        $addof->save();
+        return redirect()->route('addofficer')->with('success','Officer Added Successfully');
     }
 
     /**

@@ -4,7 +4,7 @@
 
 	<div class="form-parent">
 		<br><br><br><br>
-		<form class="container bg-white p-4 card align-self-center" style="width: 400px">
+		<div class="container bg-white p-4 card align-self-center" style="width: 400px">
 			
 			<h1 class="text-center">Add Officer</h1>
 
@@ -65,7 +65,7 @@
 			</div>
 		</form>
 	</div>
-
+</div>
 
 @endsection
 

@@ -43,8 +43,8 @@
 		<div class="container text-center text-white hearderset">
 			<h2> Welcome To Our System!!! </h2>
 			<h1> Shweta Lohar </h1>
-			<button class="btn btn-warning text-white btn-lg">Admin </button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button class="btn btn-warning text-white btn-lg">Officer </button>
+			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Admin</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Officer </button>
 		</div>
 	</div>
 

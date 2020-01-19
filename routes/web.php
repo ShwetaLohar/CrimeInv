@@ -19,9 +19,15 @@ Route::get('/caseofficer', 'testing@caseofficer')->name('caseofficer');
 /*Route::post('/caseofficer', 'testing@CaseOfficerformValidationPost');
 Route::post('/index', 'testing@ResultformValidationPost');
 Route::post('/addcase', 'testing@AddCaseformValidationPost');*/
-
+Route::get('/adlogin', 'testing@AdminLogin')->name('AdminLogin');
 
 Route::resource('result','ResultController');
 Route::resource('case','AddcaseController');
 Route::resource('addcofficer','CaseofficerController');
 Route::resource('Officer','OfficerController');
+
+//Login
+Route::get('/main','MainController@index');
+Route::post('/main/checklogin', 'MainController@checklogin');
+Route::get('/main/successlogin', 'MainController@successlogin');
+Route::get('/main/logout', 'MainController@logout');
