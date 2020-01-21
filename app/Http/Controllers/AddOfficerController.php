@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Officer;
+use App\addofficer;
 
-class OfficerController extends Controller
+class AddOfficerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class OfficerController extends Controller
      */
     public function index()
     {
-        return view('addofficer');
+        //
     }
 
     /**
@@ -25,7 +25,6 @@ class OfficerController extends Controller
     public function create()
     {
         return view('addofficer');
-
     }
 
     /**
@@ -36,7 +35,7 @@ class OfficerController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+       $this->validate($request,[
                 'officer_id' => 'required|numeric',
                 'officer_name' => 'required|min:5|max:35',
                 'area' => 'required|min:5|max:35',
@@ -54,7 +53,7 @@ class OfficerController extends Controller
                 'email.required'=> '*Please enter email ID',
                 'image.required'=> '*Please upload image file',
             ]);
-       $addof = new Officer([
+       $addof = new addofficer([
             'officer_id' => $request->get('officer_id'),
             'officer_name' => $request->get('officer_name'),
             'area' => $request->get('area'),
@@ -64,7 +63,7 @@ class OfficerController extends Controller
             'image' => $request->file('image')
         ]);
         $addof->save();
-        return redirect()->route('addofficer')->with('success','Officer Added Successfully');
+        return redirect()->route('addofficer')->with('success','Officer Added Successfully'); 
     }
 
     /**
@@ -75,7 +74,7 @@ class OfficerController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

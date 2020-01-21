@@ -20,7 +20,8 @@ class CreateAddofficersTable extends Migration
             $table->string('address');
             $table->integer('mobile');
             $table->string('email');
-            $table->binary('image');//for blob
+            //$table->binary('image');
+            $table->string('image');
             $table->timestamps();
         });
     }

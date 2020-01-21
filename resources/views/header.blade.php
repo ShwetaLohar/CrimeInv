@@ -1,5 +1,8 @@
 <header class="navbar navbar-expand-lg navbar-dark bg-dark text-light fixed-top">
-	<a class="navbar-brand display-1">Crime Investigation</a>
+	<div id="logo">
+		<img src="logo.png"/>
+	</div>
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon text-secondary"></span>
   	</button>
@@ -27,7 +30,7 @@
 		      <a class="nav-link" href="">View Case History</a>
 		    </li>
 		     <li class="nav-item">
-		      <a class="nav-link" href="">Logout</a>
+		      <a class="nav-link" href="{{route('home')}}">Logout</a>
 		    </li>
       	</ul>
     </div>

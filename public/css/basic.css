@@ -1,6 +1,5 @@
 body {background-color: #f8f8ff !important;
 	font-family: 'Oxygen', sans-serif !important;
-	
 
 .main-nav>ul>li>a{
 	color:#ffffff !important;
@@ -11,4 +10,9 @@ body {background-color: #f8f8ff !important;
 #navbar .nav li{float: none !important;display: inline-block;}#navbar .nav li a{color: #000}
 .navbar-default{
 	background-color: #267326;
+}
+#logo{
+	width: 200px;
+	height: 80px;
+	float: left;
 }

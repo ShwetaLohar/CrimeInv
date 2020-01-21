@@ -41,10 +41,7 @@ class testing extends Controller
     {
         return view('AdminLogin');
     }
-    public function login1()
-    {
-        return view('login1');
-    }
+    
 
 
     public function create()
@@ -171,6 +168,28 @@ class testing extends Controller
         dd('You are successfully added all fields.');
     }
 
-   
+     public function AddOfficerValidationPost(Request $request)
+    {
+         $this->validate($request,[
+                'officer_id' => 'required|numeric',
+                'officer_name' => 'required|min:5|max:35',
+                'area' => 'required|min:5|max:35',
+                'address'=> 'required|min:5|max:35',
+                'mobile' => 'required|min:11|numeric',
+                'email' =>'required|email|max:100',
+                // 'image' =>'required|image',
+                'image' =>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ],[
+                'officer_id.required' => '*Please enter numeric values* ',
+                'officer_name.required' => '*Please enter names*',
+                'area.required'=> '*Please enter area',
+                'address.required'=>'*Please enter address',
+                'mobile.required'=>'*Please enter phone number',
+                'email.required'=> '*Please enter email ID',
+                'image.required'=> '*Please upload image file',
+            ]);
+
+        dd('You are successfully added all fields.');
+    }
 }
 

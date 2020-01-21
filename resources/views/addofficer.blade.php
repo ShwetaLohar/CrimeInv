@@ -8,7 +8,7 @@
 			
 			<h1 class="text-center">Add Officer</h1>
 
-             <form method="POST" action="{{url('Officer')}}" autocomplete="off" >	
+             <form method="POST" action="{{url('officer')}}" autocomplete="off" enctype="multipart/form-data">	
              	<input type="hidden" name="_token" value="{{csrf_token() }}">
 
 			<div class="form-group {{ $errors->has('officer_id') ? 'has-error' : '' }}">

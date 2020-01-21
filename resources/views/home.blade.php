@@ -41,8 +41,8 @@
 
 	<div class="bgimg">
 		<div class="container text-center text-white hearderset">
-			<h2> Welcome To Our System!!! </h2>
-			<h1> Shweta Lohar </h1>
+			<h2>"Nothing matters but the facts. Without them, the science of criminal investigation is nothing more than a guessing game"</h2>
+			<h1>Welcome!!!</h1>
 			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Admin</button>&nbsp;&nbsp;&nbsp;&nbsp;
 			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Officer </button>
 		</div>
