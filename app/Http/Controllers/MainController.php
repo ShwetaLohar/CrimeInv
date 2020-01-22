@@ -13,11 +13,13 @@ class MainController extends Controller
         return view('AdminLogin');
     }
 
+
+
     function checklogin(Request $request)
     {
     	$this->validate($request, [
-    		'username'    => 'required|username',
-            'password'    =>'required|alphaNum|min:3',
+    		'username'    => 'required',
+            'password'    => 'required|alphaNum|min:3',
     	]);
 
     	$user_data = array(
@@ -27,7 +29,7 @@ class MainController extends Controller
 
     	if(Auth::attempt($user_data))
     	{
-    		return redirect('main/successlogin');
+    		return redirect('/addcase');
     	}
     	else
     	{
