@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCrimesTable extends Migration
+class CreateAddcasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCrimesTable extends Migration
      */
     public function up()
     {
-        Schema::create('results', function (Blueprint $table) {
+        Schema::create('addcases', function (Blueprint $table) {
             $table->bigIncrements('case_id');
             $table->string('name');
-            $table->string('suspect');
+            $table->string('officer_id');
             $table->string('note');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateCrimesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('results');
+        Schema::dropIfExists('addcases');
     }
 }

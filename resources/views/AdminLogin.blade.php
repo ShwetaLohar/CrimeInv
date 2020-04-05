@@ -1,7 +1,7 @@
 <!DOCTYPE html>
  <html>
     <head>
-        <title>Admin Login</title>
+        <title>Login</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -17,7 +17,8 @@
         <br />
         <br><br><br><br>
         <div class="container box">
-          <h3 align="center">Admin Login </h3><br />
+          <h3 align="center">Login</h3><br />
+          <h2></h2>
 
           <form method="post" action="{{ url('/main/checklogin')}}">
             {{ csrf_field() }}
@@ -25,13 +26,14 @@
               <label>Enter Username</label>
               <input type="text" name="username" class="form-control" />
             </div>
+            
             <div class="form-group">
               <label>Enter Password</label>
               <input type="password" name="password" class="form-control" />
             </div>
 
             @if(isset(Auth::user()->username))
-            <script>window.location="/main/successlogin";</script>
+            <script>window.location="/main";</script>
             @endif
             
             @if($message = Session::get('error'))
@@ -52,12 +54,12 @@
           </div>
           @endif
 
-         <!--  @if (\Session::has('success'))
+          @if (\Session::has('success'))
           <div class="alert alert-success">
             <p>{{\Session::get('success')}}</p>
           </div>
           @endif
-          {{csrf_field()}} -->
+          {{csrf_field()}} 
 
              <div class="form-group">
               <input type="submit" name="login" class="btn btn-primary btn-block"  value="Login" />

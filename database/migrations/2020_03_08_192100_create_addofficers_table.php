@@ -14,14 +14,14 @@ class CreateAddofficersTable extends Migration
     public function up()
     {
         Schema::create('addofficers', function (Blueprint $table) {
-            $table->integer('officer_id');
-            $table->string('officer_name');
+            $table->bigIncrements('officer_id');
+            $table->string('password');
+            $table->string('username');
             $table->string('area');
             $table->string('address');
-            $table->integer('mobile');
+            $table->string('mobile');
             $table->string('email');
-            //$table->binary('image');
-            $table->string('image');
+            $table->binary('select_file');
             $table->timestamps();
         });
     }

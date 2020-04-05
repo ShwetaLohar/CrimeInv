@@ -1,18 +1,44 @@
 body {background-color: #f8f8ff !important;
 	font-family: 'Oxygen', sans-serif !important;
+	
 
 .main-nav>ul>li>a{
 	color:#ffffff !important;
 }
-.gm-container, header, #main, #content{float: left;width: 100%;}#main{margin-top: 100px;}.form-parent{padding-top: 50px;}
+.gm-container, header, #main, #content
+{
+	float: left;
+	width: 100%;
+}
+
+#main
+{
+   margin-top: 100px;
+}
+.form-parent
+{
+	padding-top: 50px;
+}
 .form-parent h1, .form-parent /*label{color: #fff;}*/
-#navbar .nav{width: 100%;float: left;text-align: center;}
-#navbar .nav li{float: none !important;display: inline-block;}#navbar .nav li a{color: #000}
+#navbar .nav
+{
+	width: 100%;
+	float: left; 
+	text-align:center;
+}
+#navbar .nav li{
+	float: none !important;
+	display: inline-block;
+	text-align: center;
+}
+#navbar .nav li a{
+color: #000
+}
 .navbar-default{
 	background-color: #267326;
 }
 #logo{
 	width: 200px;
-	height: 80px;
+	height: 20px;
 	float: left;
 }

@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Session;
+use DB;
 use Validator;
 use Auth;
+
 
 class MainController extends Controller
 {
@@ -13,13 +15,11 @@ class MainController extends Controller
         return view('AdminLogin');
     }
 
-
-
     function checklogin(Request $request)
     {
     	$this->validate($request, [
     		'username'    => 'required',
-            'password'    => 'required|alphaNum|min:3',
+            'password'    => 'required|alphaNum|min:5',
     	]);
 
     	$user_data = array(
@@ -27,9 +27,23 @@ class MainController extends Controller
            'password' =>$request->get('password')
     	);
 
+        DB::enableQueryLog();
+
     	if(Auth::attempt($user_data))
     	{
-    		return redirect('/addcase');
+
+            if(Auth::user()->role_id == 1) {
+                Session::put('isAdmin','true');
+            }else {
+                Session::put('isAdmin','false');
+            }
+
+            
+
+            if(Auth::user()->role_id == 1)
+                return redirect('/addcase');
+            else
+                return redirect('/addsuspect');
     	}
     	else
     	{
@@ -42,9 +56,11 @@ class MainController extends Controller
     {
         return view('successlogin');
     }
+
     function logout()
     {
-        Auth::logout();
-        return redirect('main');
+         Auth::logout();
+        return redirect('/main');
+       
     }
 }

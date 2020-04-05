@@ -7,8 +7,9 @@
 <div class="gm-container">
 
     
-    @include('header')
-    
+      
+        @include('header')
+   
 
     <div id="main" >
 

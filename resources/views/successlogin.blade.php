@@ -25,7 +25,7 @@
             <br />
             <a href="{{ url('/main/logout') }}">Logout</a>
           </div>
-          else
+         
           <script>window.location="/main";</script>
          
           @endif

@@ -15,13 +15,14 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 
 	<header class="navbar navbar-expand-md bg-dark navbar-dark navbar-top">
 		
 		<div class="container">
-			<a href="" class="navbar-brand text-warning font-weight-bold"> CRIME INVESTIGATION MANAGEMENT SYSTEM</a>
+			<a href="" class="navbar-brand text-warning font-weight-bold"><i class="fa fa-legal fa-4"></i> CRIME INVESTIGATION MANAGEMENT SYSTEM</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -43,8 +44,8 @@
 		<div class="container text-center text-white hearderset">
 			<h2>"Nothing matters but the facts. Without them, the science of criminal investigation is nothing more than a guessing game"</h2>
 			<h1>Welcome!!!</h1>
-			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Admin</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Officer </button>
+			<button class="btn btn-warning text-white btn-lg" onclick="window.open('/main')">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- <button class="btn btn-warning text-white btn-lg" onclick="window.open('/offlogin')">Officer </button> -->
 		</div>
 	</div>
 

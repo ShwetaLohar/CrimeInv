@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\result;
+use App\predictresult;
 
-class ResultController extends Controller
+class PredictController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class ResultController extends Controller
      */
     public function create()
     {
-        return view('addresult');
+        return view('predict');
     }
 
     /**
@@ -35,24 +35,24 @@ class ResultController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-                'case_id' => 'required|numeric',
-                'suspect' => 'required|min:5|max:35',
-                'note' => 'required|min:5|max:35',
-                
-            ],[
-                'case_id.required' => ' *Please enter numeric values*',
-                'suspect.required' => '*Please enter numeric values* ',
-                'note.required' => '*Please enter names*',
-                
-            ]);
-        $res = new result([
-            'case_id' => $request->get('case_id'),
-            'suspect' => $request->get('suspect'),
-            'note' => $request->get('note')
+        $this->validate($request,[ 
+            'case_id' => 'required|min:1',
+            'suspect' => 'required|min:5|max:50', 
+            'point' => 'required|numeric',
+        ],[
+            'case_id.required' => '*Please enter numeric values* ', 
+            'suspect.required' => '*Please enter suspect* ', 
+            'point.required' => '*Please enter points*',
         ]);
-        $res->save();
-        return redirect()->route('addresult')->with('success','Result Submitted.');
+        $p = new predictresult([
+            'case_id' => $request->get('case_id'), 
+            'suspect' => $request->get('suspect'), 
+            'point' => $request->get('point')
+        ]);
+
+        $p->save();
+        return redirect()->route('predict')->with('success','Prediction Added Successfully');
+
     }
 
     /**

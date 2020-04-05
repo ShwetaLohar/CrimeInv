@@ -45,6 +45,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
+            'max_connections=300',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'remotemysql.com'),
             'port' => env('DB_PORT', '3306'),

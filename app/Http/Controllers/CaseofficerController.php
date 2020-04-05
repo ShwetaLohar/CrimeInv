@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\caseofficer;
+use DB;
 
 class CaseofficerController extends Controller
 {
@@ -37,24 +38,21 @@ class CaseofficerController extends Controller
      {
         
         $this->validate($request,[
-                'case_id' => 'required|numeric',
-                'name' => 'required|min:5|max:35',
-                'officer_id' => 'required|numeric',
-                'officer_name' => 'required|min:5|max:35',
+                'case_id' => 'required|min:1',
+                'officer_id' => 'required|min:1',
+                
                 
             ],[
                 'case_id.required' => ' *Please enter numeric values*',
-                'name.required' => ' *PLease enter Name*',
-                'officer_id' => '*Please enter numeric values* ',
-                'officer_name.required' => '*Please enter names*',
+                'officer_id.required' => '*Please enter numeric values*'
+                
                 
             ]);
         
         $cofficer = new caseofficer([
             'case_id' => $request->get('case_id'),
-            'name' => $request->get('name'),
             'officer_id' => $request->get('officer_id'),
-            'officer_name' => $request->get('officer_name')
+            
         ]);
 
         $cofficer->save();
@@ -63,6 +61,17 @@ class CaseofficerController extends Controller
 
     }
 
+
+//     public function getCaseNameByCaseId($caseId = 0) {
+
+
+// // 
+//         $caseName = DB::table('addcases')->where('case_id', $caseId)->value("name");
+//         $this->case = ['caseId' => $caseId, 'caseName' => $caseName];
+//         error_log($caseName);
+//         return redirect()->route('caseofficer')->with('case', $this->case);
+
+//     }
         
    
 

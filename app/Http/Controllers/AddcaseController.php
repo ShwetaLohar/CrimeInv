@@ -14,7 +14,7 @@ class AddcaseController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -36,26 +36,23 @@ class AddcaseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-                'case_id' => 'required|numeric',
+                
                 'name' => 'required|min:5|max:35',
-                'officer_id' => 'required|numeric',
-                'officer_name' => 'required|min:5|max:35',
+                'officer_id' => 'required|min:1',
                 'note' => 'required|min:5|max:35',
 
                 
             ],[
-                'case_id.required' => ' *Please enter numeric values*',
+                
                 'name.required' => ' *PLease enter Name*',
                 'officer_id' => '*Please enter numeric values* ',
-                'officer_name.required' => '*Please enter names*',
                 'note.required' => '*Please enter names*',
                 
             ]);
         $ac = new addcase([
-            'case_id' => $request->get('case_id'),
+            
             'name' => $request->get('name'),
             'officer_id' => $request->get('officer_id'),
-            'officer_name' => $request->get('officer_name'),
             'note' =>$request->get('note')
         ]);
         $ac->save();

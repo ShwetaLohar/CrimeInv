@@ -41,7 +41,40 @@ class testing extends Controller
     {
         return view('AdminLogin');
     }
+    public function addevidence()
+    {
+        return view('addevidence');
+    }
     
+    public function addsuspect()
+    {
+        return view('addsuspect');
+    }
+    public function predict()
+    {
+        return view('predict');
+    }
+    public function viewsuspect()
+    {
+        return view('viewsuspect');
+    }
+    public function v_evidences()
+    {
+        return view('v_evidences');
+    }
+    public function offhistory()
+    {
+        return view('offhistory');
+    }
+    public function crimehistory()
+    {
+        return view('crimehistory');
+    }
+    
+
+
+
+
 
 
     public function create()
@@ -171,25 +204,127 @@ class testing extends Controller
      public function AddOfficerValidationPost(Request $request)
     {
          $this->validate($request,[
+                'username' => 'required|min:5|max:35',
+                'password'=>'required|numeric',
                 'officer_id' => 'required|numeric',
-                'officer_name' => 'required|min:5|max:35',
                 'area' => 'required|min:5|max:35',
                 'address'=> 'required|min:5|max:35',
                 'mobile' => 'required|min:11|numeric',
                 'email' =>'required|email|max:100',
-                // 'image' =>'required|image',
-                'image' =>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'select_file' => 'required|image|mimes:jpeg,png,jpg,gif|max=2048',
+                
+
             ],[
+                
+                'username.required' => '*Please enter names*',
+                'password.required'=> '*Please enter password',
                 'officer_id.required' => '*Please enter numeric values* ',
-                'officer_name.required' => '*Please enter names*',
                 'area.required'=> '*Please enter area',
                 'address.required'=>'*Please enter address',
                 'mobile.required'=>'*Please enter phone number',
                 'email.required'=> '*Please enter email ID',
-                'image.required'=> '*Please upload image file',
+                'select_file.required'=> '*Please upload image file',
             ]);
 
         dd('You are successfully added all fields.');
     }
+
+    public function AddEvidenceformValidationPost(Request $request)
+    {
+         $this->validate($request,[
+                'case_id' => 'required|numeric',
+                'name' => 'required|min:5|max:35',
+                'evidence' => 'required|min:5|max:35',
+                'suspect' => 'required|min:5|max:35',
+                'note' => 'required|min:5|max:50',
+                'points' => 'required|numeric',
+                
+                
+            ],[
+                'case_id.required' => '*Please enter numeric values* ',
+                'name.required' => '*Please enter names*',
+                'evidence.required' => '*Please enter evidence* ',
+                'suspect.required' => '*Please enter suspect*',
+                'note.required' => '*Please enter note*',
+                'points.required' => '*Please enter points*',
+                
+            ]);
+
+        dd('You are successfully added all fields.');
+    }
+    //
+
+    public function PredictResultformValidationPost(Request $request)
+    {
+        $this->validate($request,[ 
+            'case_id' => 'required|numeric',
+            'name' => 'required|min:5|max:35', 
+            'suspect' => 'required|min:5|max:50', 
+            'point' => 'required|numeric',
+        ],[
+            'case_id.required' => '*Please enter numeric values* ', 
+            'name.required' => '*Please enter name*', 
+            'suspect.required' => '*Please enter suspect* ', 
+            'point.required' => '*Please enter points*',
+        ]);
+        
+         dd('You are successfully added all fields.');
+    }
+
+    public function AddSuspectformValidationPost(Request $request)
+    {
+
+         $this->validate($request,[
+                'case_id' => 'required|numeric',
+                'suspect' => 'required|min:5|max:35',
+                'mobile' => 'required|min:11|numeric',
+                'address'=> 'required|min:5|max:35',
+                'relation' => 'required|min:5|max:50',
+                'note' => 'required|min:5|max:50',
+                'upload_file' => 'required|image|mimes:jpeg,png,jpg,gif',
+                
+            ],[
+                'case_id.required' => '*Please Enter numeric values* ',
+                'suspect.required' => '*Please Enter suspect name*',
+                'mobile.required' => '*Please Enter mobile* ',
+                'address.required' => '*Please Enter address*',
+                'relation.required' => '*Please Enter relation*',
+                'note.required' => '*Please Enter note*',
+                'upload_file.required'=> '*Please upload image file*',
+            ]);
+
+         dd('You are successfully added all fields.');
+
+    }
+
+
+
 }
+
+
+       
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
