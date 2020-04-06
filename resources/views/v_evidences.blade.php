@@ -4,11 +4,11 @@
 
 	<div class="form-parent">
 		<br><br><br><br>
-		<div class="container bg-white  align-self-center">
+		<div class="container bg-white  align-self-center" style="margin-left: 20%;">
 	<div class="row">
 		<div class="col-md-12">
 		<br/>
-		<h3 align="center">View Evidence</h3>
+		<h1 class="text-center">View Evidences</h1>
 		<br/>
 		<!-- <script type="text/javascript">
 				
@@ -39,6 +39,7 @@
 
 		@if( $evids ?? '')
 		<table class="table table-bordered">
+			<thead class="thead-dark">
 			<tr>
 				<th> Case Id </th>
 				<th> Evidence</th>
@@ -48,6 +49,7 @@
 				<th> Logical Score </th>
 				
 			</tr>
+		</thead>
 		
 			@foreach ($evids as $row)
 			<tr>

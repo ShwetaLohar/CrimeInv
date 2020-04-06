@@ -4,11 +4,11 @@
 
 		<div class="form-parent">
 		<br><br><br><br>
-		<div class="container bg-white  align-self-center">
+		<div class="container bg-white  align-self-center" style="margin-left: 20%; ">
 	<div class="row">
 		<div class="col-md-12">
 		<br/>
-		<h3 align="center">View Suspect</h3>
+		<h1 class="text-center">View Suspect</h1>
 		<br/>
 		
 		<script type="text/javascript">

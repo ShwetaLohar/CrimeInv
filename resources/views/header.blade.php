@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 
@@ -69,7 +69,7 @@
 		    </li>
 		    @else
 
-		     <li class="nav-item">
+		     <li class="nav-item active">
 		      <a class="nav-link" href="{{route('offhistory')}}">Officer History</a>
 		    </li>
 		    <li class="nav-item">
@@ -105,7 +105,7 @@
             </div>
 
 
-   
+
 </div>
     
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>

@@ -1,30 +1,30 @@
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .bgimg{
-	background-image: url('../images/prison.jpg');
-	background-size: 100% 100%;
-	background-attachment: fixed;
-	opacity: 0.8;
-	width: 100%;
-	height: 90vh;
+    background-image: url('../images/prison.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    opacity: 0.8;
+    width: 100%;
+    height: 90vh;
 }
 
 
 .hearderset{
-	padding-top: 200px;
-	box-sizing: border-box;
+    padding-top: 200px;
+    box-sizing: border-box;
 }
 
 .hearderset h2{
-	font-size: 42px;
-	font-family: 'Oxygen', sans-serif !important;
+    font-size: 42px;
+    font-family: 'Oxygen', sans-serif !important;
 }
 
 .hearderset h1{
-	font-size: 50px;
-	font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
 }
 
  #wrapper {
@@ -48,7 +48,7 @@ html {
     position: absolute; 
     left: 250px;
     width: 0;
-    height: 100%;
+    height: 120%;
     margin-left: -250px;
     overflow-y: auto;
     background: #000;
@@ -182,7 +182,4 @@ html {
  
     }
 }
-
-
- 
 
