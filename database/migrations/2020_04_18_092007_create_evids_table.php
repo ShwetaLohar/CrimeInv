@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePredictresultsTable extends Migration
+class CreateEvidsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class CreatePredictresultsTable extends Migration
      */
     public function up()
     {
-        Schema::create('predictresults', function (Blueprint $table) {
-            $table->string('case_id');
+        Schema::create('evids', function (Blueprint $table) {
+            $table->bigIncrements('evid_id');
+            $table->string('evidence');
+            $table->integer('susp_id');
             $table->string('suspect');
-            $table->integer('point');
+            $table->string('note');
+            $table->integer('physical');
+            $table->integer('logical');
+            $table->integer('case_id');
+            
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ class CreatePredictresultsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('predictresults');
+        Schema::dropIfExists('evids');
     }
 }

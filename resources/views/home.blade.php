@@ -22,7 +22,7 @@
 	<header class="navbar navbar-expand-md bg-dark navbar-dark navbar-top">
 		
 		<div class="container">
-			<a href="" class="navbar-brand text-warning font-weight-bold"><i class="fa fa-legal fa-4"></i> CRIME INVESTIGATION MANAGEMENT SYSTEM</a>
+			<a href="" class="navbar-brand text-warning font-weight-bold"> CRIME INVESTIGATION MANAGEMENT SYSTEM</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
 				<span class="navbar-toggler-icon"></span>
 			</button>

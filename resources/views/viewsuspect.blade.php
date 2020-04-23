@@ -4,15 +4,14 @@
 
 		<div class="form-parent">
 		<br><br><br><br>
-		<div class="container bg-white  align-self-center" style="margin-left: 20%; ">
+		<div class="container bg-white  align-self-center">
 	<div class="row">
 		<div class="col-md-12">
 		<br/>
 		<h1 class="text-center">View Suspect</h1>
 		<br/>
 		
-		<script type="text/javascript">
-				
+		<script type="text/javascript">	
 
 			function getSusps(){
 				var id = $('#case_id').val();
@@ -41,7 +40,7 @@
 			<table class="table table-bordered">
 			<thead class="thead-dark">
 				<tr>
-					<th>Case ID </th>
+					<th> Case ID </th>
 					<th> Suspect </th>
 					<th> Mobile Number </th>
 					<th> Address </th>
@@ -49,6 +48,7 @@
 					<th> Image </th>
 					<th> Note </th>
 					<th> Probability </th>
+					<th> Action </th>
 				</tr>
 			</thead>
 			
@@ -62,6 +62,9 @@
 					<td><img src="data:image/jpg;base64,{{base64_encode($row->upload_file)}}" height="100" width="100"/></td>
 					<td> {{ $row->note }} </td>
 					<td> {{ $row->prob }} </td>
+					<td> <a class="btn btn-primary" href="/addresult?caseId={{ $row->case_id }}&suspId={{ $row->susp_id }}" target="_BLANK">Finalize
+					</td>
+
 				</tr>
 				@endforeach
 			

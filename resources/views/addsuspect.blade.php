@@ -1,5 +1,5 @@
 @extends('default')
-@section('title', '')
+@section('title', '')   
 @section('content')
 
 	<div class="form-parent">
@@ -13,7 +13,7 @@
 			<div class="form-group {{ $errors->has('case_id') ? 'has-error' : '' }}"> 
 			     <label>Case ID</label>   
 			     <select class="form-control" id="case_id" name="case_id"  required focus>
-						<option selected="selected">--- Select Case ID ---</option>
+						<option selected disabled="disabled" value="">--- Select Case ID ---</option>
 				@foreach (App\addcase::get() as $addcase)
 				    <option value='{{ $addcase->case_id }}'>{{ $addcase->case_id }} {{ $addcase->name }}</option>
 				@endforeach

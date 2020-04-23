@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class result extends Model
 {
-    protected $fillable = ['case_id','suspect','note']; 
+    protected $fillable = ['result_id','case_id','susp_id','note']; 
 } 

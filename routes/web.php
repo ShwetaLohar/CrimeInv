@@ -14,7 +14,6 @@
 Route::get('/', 'testing@home')->name('home');
 Route::get('/addresult', 'testing@addresult')->name('addresult');
 Route::get('/addcase', 'testing@addcase')->name('addcase');
-Route::get('/predict', 'testing@predict')->name('predict');
 
 
 Route::get('/addevidence', 'testing@addevidence')->name('addevidence');
@@ -40,6 +39,11 @@ Route::get('/viewsuspect','AddSuspectController@index')->name('viewsuspect');
 Route::get('/viewsuspect/{caseId}', 'AddSuspectController@getCasesByCaseId')->name('getCasesByCaseId');
 
 Route::get('/v_evidences','AddevidenceController@index')->name('v_evidences');
+Route::get('/v_evidences/{caseId}', 'AddevidenceController@getEvidencesByCaseId')->name('getEvidencesByCaseId');
+
+
+Route::get('/predict', 'PredictController@index')->name('predict');
+Route::get('/predict/{caseId}', 'PredictController@getPredictByCaseId')->name('getPredictByCaseId');
 
 //Login
 Route::get('/main','MainController@index');

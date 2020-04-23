@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\evid;
 
@@ -10,8 +10,8 @@ class AddevidenceController extends Controller
    public function index()
     {
         
-        $evids =evid::all()->toArray();
-        return view('v_evidences',['evids'=>$evids]);
+          // $evids =evid::all()->toArray();
+        return view('v_evidences');
 
 
     }
@@ -67,6 +67,14 @@ public function store(Request $request)
         ]);
         $ae->save();
         return redirect()->route('addevidence')->with('success','Evidence Added Successfully'); 
+    }
+
+
+     public function getEvidencesByCaseId($caseId = 0) {
+
+        $addevids = DB::table('evids')->where('case_id', $caseId)->get();
+        return view('v_evidences',['addevids'=>$addevids]);
+
     }
 
     /**

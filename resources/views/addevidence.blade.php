@@ -15,7 +15,7 @@
 			<div class="form-group {{ $errors->has('case_id') ? 'has-error' : '' }}"> 
 		        <label>Case ID and Name</label>   
 				<select class="form-control" id="case_id" name="case_id"  required focus>
-					<option selected="selected">--- Select Case Details ---</option>
+					<option selected disabled="disabled" value="">--- Select Case Details ---</option>
 				@foreach (App\addcase::get() as $addcase)
 			    		<option value='{{ $addcase->case_id }}'>{{ $addcase->case_id }} {{ $addcase->name }} </option>
 			    @endforeach
@@ -35,7 +35,7 @@
 			<div class="form-group {{ $errors->has('suspect') ? 'has-error' : '' }}"> 
 		        <label>Suspect Name</label>   
 				<select class="form-control" id="suspect" name="suspect"  required focus>
-					<option selected="selected">--- Select Name ---</option>
+					<option selected disabled="disabled" value="">--- Select Name ---</option>
 				@foreach (App\addsuspect::get() as $addsuspect)
 			    		<option value='{{ $addsuspect->suspect }}'>{{ $addsuspect->suspect }} </option>
 			    @endforeach

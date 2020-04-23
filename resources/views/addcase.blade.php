@@ -31,7 +31,7 @@
 			<div class="form-group  {{ $errors->has('officer_id') ? 'has-error' : '' }}">
 				<label>Officer ID and Name</label>
 				<select class="form-control" id="officer_id" name="officer_id" required focus>
-						<option value="no" selected disabled=true>--- Select Officer Details ---</option>
+						<option value="" selected disabled="disabled">--- Select Officer Details ---</option>
 					@foreach (App\User::get() as $user)
 				    		<option value='{{ $user->officer_id }}'>{{ $user->officer_id }} {{ $user->username }} </option>
 				    @endforeach

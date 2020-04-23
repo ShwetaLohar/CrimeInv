@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEvidsTable extends Migration
+class CreateResultsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateEvidsTable extends Migration
      */
     public function up()
     {
-        Schema::create('evids', function (Blueprint $table) {
-            $table->bigIncrements('evid_id');
-            $table->string('evidence');
-            $table->string('suspect');
-            $table->string('note');
-            $table->integer('physical');
-            $table->integer('logical');
+        Schema::create('results', function (Blueprint $table) {
+            $table->bigIncrements('result_id');
             $table->integer('case_id');
-            
+            $table->integer('susp_id');
+            $table->string('note');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ class CreateEvidsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evids');
+        Schema::dropIfExists('results');
     }
 }

@@ -37,18 +37,18 @@ class ResultController extends Controller
     {
         $this->validate($request,[
                 'case_id' => 'required|numeric',
-                'suspect' => 'required|min:5|max:35',
-                'note' => 'required|min:5|max:35',
+                'susp_id' => 'required|numeric',
+                'note' => 'required|min:5|max:50',
                 
             ],[
-                'case_id.required' => ' *Please enter numeric values*',
-                'suspect.required' => '*Please enter numeric values* ',
+                'case_id.required' => ' *req*',
+                'susp_id.required' => '*req* ',
                 'note.required' => '*Please enter names*',
                 
             ]);
         $res = new result([
             'case_id' => $request->get('case_id'),
-            'suspect' => $request->get('suspect'),
+            'susp_id' => $request->get('susp_id'),
             'note' => $request->get('note')
         ]);
         $res->save();

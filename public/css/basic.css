@@ -1,14 +1,19 @@
-body {background-color: #f8f8ff !important;
+body {
+
+	background-color: #f8f8ff !important;
 	font-family: 'Oxygen', sans-serif !important;
-	
+	justify-content: space-between !important;
 
 .main-nav>ul>li>a{
 	color:#ffffff !important;
+	justify-content: space-between !important;
+
 }
 .gm-container, header, #main, #content
 {
 	float: left;
 	width: 100%;
+	justify-content: space-between;
 }
 
 #main
@@ -19,26 +24,54 @@ body {background-color: #f8f8ff !important;
 {
 	padding-top: 50px;
 }
-.form-parent h1, .form-parent /*label{color: #fff;}*/
+.form-parent h1, .form-parent label{
+	color: #fff;}
+
+
 #navbar .nav
 {
 	width: 100%;
 	float: left; 
 	text-align:center;
+	padding: 30px;
+	margin-left: 20px;
 }
-#navbar .nav li{
+
+#navbar .nav ul li{
 	float: none !important;
 	display: inline-block;
 	text-align: center;
+	padding: 30px;
 }
-#navbar .nav li a{
-color: #000
+
+#navbar .nav ul li a{
+  color: #000;
+  justify-content: space-between;
+
 }
 .navbar-default{
 	background-color: #267326;
 }
+
+#navbar ul li:hover{
+background-color: #f39d1a;	
+}
+
+
 #logo{
 	width: 200px;
 	height: 20px;
 	float: left;
 }
+
+
+
+
+
+
+
+
+
+
+
+

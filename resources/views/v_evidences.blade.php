@@ -4,13 +4,13 @@
 
 	<div class="form-parent">
 		<br><br><br><br>
-		<div class="container bg-white  align-self-center" style="margin-left: 20%;">
+		<div class="container bg-white  align-self-center">
 	<div class="row">
 		<div class="col-md-12">
 		<br/>
 		<h1 class="text-center">View Evidences</h1>
 		<br/>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 				
 
 			function getEvids(){
@@ -18,26 +18,26 @@
 				window.location.href = "/v_evidences/" + id;
 			}
 
-		</script> -->
+		</script>
 
 		
-		<!-- <div class="form-group {{ $errors->has('case_id') ? 'has-error' : '' }}"> 
-			<label>Case ID</label>   
-			<select class="form-control" id="case_id" name="case_id"  required focus>
-				<option selected="selected">--- Select Case ID ---</option>
-				@foreach (App\addcase::get() as $addcase)
-				<option value='{{ $addcase->case_id }}'>{{ $addcase->case_id }} {{ $addcase->name }}</option>
-				@endforeach
-		    </select>
+		<div class="form-group {{ $errors->has('case_id') ? 'has-error' : '' }}"> 
+	        <label>Case ID and Name</label>   
+			<select class="form-control" id="case_id" name="case_id" onchange="getEvids()" required focus>
+				<option selected="selected">--- Select Case Details ---</option>
+			@foreach (App\addcase::get() as $addcase)
+		    	<option value='{{ $addcase->case_id }}'>{{ $addcase->case_id }} {{ $addcase->name }} </option>
+		    @endforeach
+			</select>
 			<span class="text-danger">{{ $errors->first('case_id') }}</span>
-		</div> -->
+		</div>
 
 		<div>
 			<a href="{{route('addevidence')}}"></a>
 		</div>
 
 
-		@if( $evids ?? '')
+		@if( $addevids ?? '') 
 		<table class="table table-bordered">
 			<thead class="thead-dark">
 			<tr>
@@ -51,14 +51,14 @@
 			</tr>
 		</thead>
 		
-			@foreach ($evids as $row)
+			@foreach ($addevids as $row)
 			<tr>
-				<td>{{$row['case_id']}}</td>
-				<td>{{$row['evidence']}}</td>
-				<td>{{$row['suspect']}}</td>
-				<td>{{$row['note']}}</td>
-				<td>{{$row['physical']}}</td>
-				<td>{{$row['logical']}}</td>
+				<td>{{ $row->case_id }}</td>
+				<td>{{ $row->evidence }}</td>
+				<td>{{ $row->suspect }}</td>
+				<td>{{ $row->note }}</td>
+				<td>{{ $row->physical }}</td>
+				<td>{{ $row->logical }}</td>
 				
 			</tr>
 			@endforeach

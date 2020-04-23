@@ -6,32 +6,33 @@
 		<br><br><br><br>
 		<div class="bg-white p-4 card align-self-center" style="max-width: 400px; margin: 0px auto;">
 		<h1 class="text-center">Add Result</h1>
-			
 
 			<form method="POST" action="{{url('result')}}" autocomplete="off" >
 				<input type="hidden" name="_token" value="{{csrf_token() }}">
-			
+		
 
 			<div class="form-group {{ $errors->has('case_id') ? 'has-error' : '' }}"> 
-			        <label>Case ID and Name</label>   
-					<select class="form-control" id="case_id" name="case_id"  required focus>
-						<option option value="no" selected disabled=true>--- Select Case Details ---</option>
-					@foreach (App\addcase::get() as $addcase)
-				    		<option value='{{ $addcase->case_id }}'>{{ $addcase->case_id }} {{ $addcase->name }} </option>
-				    @endforeach
-					</select>
-					<span class="text-danger">{{ $errors->first('case_id') }}</span>
+		        <label>Case ID and Name</label>
+					
+				@foreach (App\addcase::get() as $addcase)
+					@if($addcase->case_id == Request::get('caseId'))
+						<input class="form-control" type="text" name="case_id" value="{{ $addcase->case_id }}">
+					@endif
+			    @endforeach
+				
+				<span class="text-danger">{{ $errors->first('case_id') }}</span>
 			</div>
 
 			
 			<div class="form-group {{ $errors->has('suspect') ? 'has-error' : '' }}"> 
-		        <label>Suspect Name</label>   
-				<select class="form-control" id="suspect" name="suspect"  required focus>
-					<option selected="selected">--- Select Name ---</option>
+		        <label>Suspect ID & Name</label>
+					
 				@foreach (App\addsuspect::get() as $addsuspect)
-			    		<option value='{{ $addsuspect->suspect }}'>{{ $addsuspect->suspect }} </option>
+					@if($addsuspect->susp_id == Request::get('suspId'))
+						<input class="form-control" type="text" name="susp_id" value="{{ $addsuspect->susp_id }}">
+					@endif
 			    @endforeach
-				</select>
+				
 				<span class="text-danger">{{ $errors->first('suspect') }}</span>
 			</div>
 			<div class="form-group {{ $errors->has('note') ? 'has-error' : '' }}">

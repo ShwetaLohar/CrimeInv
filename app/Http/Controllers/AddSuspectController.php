@@ -46,7 +46,7 @@ class AddSuspectController extends Controller
                 'upload_file' => 'required|image|mimes:jpeg,png,jpg'
                 
             ],[
-                'case_id.required' => '*Please Enter numeric values* ',
+                'case_id.required' => '*Please select  values* ',
                 'suspect.required' => '*Please Enter suspect name*',
                 'mobile.required' => '*Please Enter mobile* ',
                 'address.required' => '*Please Enter address*',
