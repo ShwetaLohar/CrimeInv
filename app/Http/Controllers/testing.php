@@ -70,6 +70,19 @@ class testing extends Controller
     {
         return view('crimehistory');
     }
+    public function contact()
+    {
+        return view('contact');
+    }
+      public function about()
+    {
+        return view('about');
+    }
+    public function news()
+    {
+        return view('news');
+    }
+
     
 
 

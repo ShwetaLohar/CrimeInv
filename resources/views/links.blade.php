@@ -17,3 +17,58 @@
  
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         
+
+
+
+
+
+
+
+
+
+
+         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/animate.css">
+    
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/aos.css">
+
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/icomoon.css">
+    <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/style.css">
+
+
+
+
+
+
+
+    <script src="{{ asset('frontEnd') }}/js/jquery.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/popper.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/bootstrap.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery.easing.1.3.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery.waypoints.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery.stellar.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/owl.carousel.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery.magnific-popup.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/aos.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery.animateNumber.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/bootstrap-datepicker.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/jquery.timepicker.min.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ asset('frontEnd') }}/js/google-map.js"></script>
+  <script src="{{ asset('frontEnd') }}/js/main.js"></script>

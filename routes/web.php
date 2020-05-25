@@ -16,6 +16,10 @@ Route::get('/addresult', 'testing@addresult')->name('addresult');
 Route::get('/addcase', 'testing@addcase')->name('addcase');
 
 
+
+Route::get('/about', 'testing@about')->name('about');
+Route::get('/news','testing@news')->name('news');
+
 Route::get('/addevidence', 'testing@addevidence')->name('addevidence');
 Route::get('/addsuspect', 'testing@addsuspect')->name('addsuspect');
 Route::get('/addofficer', 'testing@addofficer')->name('addofficer');
@@ -65,3 +69,15 @@ Route::get('crimehistory','JoinController2@index')->name('crimehistory');
 // Route::post('/officer/send','SendEmailController@send');
 
 
+// Route::get('/','FrontController@index');
+
+
+
+Route::get('/contact','ContactFormController@create')->name('contact');
+
+
+
+Route::post('/contact', [
+	'uses' => 'ContactFormController@store',
+	'as' => 'contact.store'
+]);

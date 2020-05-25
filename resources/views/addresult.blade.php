@@ -35,6 +35,7 @@
 				
 				<span class="text-danger">{{ $errors->first('suspect') }}</span>
 			</div>
+			
 			<div class="form-group {{ $errors->has('note') ? 'has-error' : '' }}">
 				<label>Note</label>
 				<textarea class="form-control" rows="3" placeholder="Enter notes Here" name="note"></textarea> 
