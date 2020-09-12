@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark  bg-dark ftco-bg-dark ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-warning " id="ftco-navbar">
 	<div class="container">
 	<!-- <h3>Crime Investigation</h3> -->
 	
@@ -8,10 +8,8 @@
 	      </button>
   	
   	<div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-    <!-- <div id="navbarNav" class="navbar-collapse collapse" -->
-    	
-      	<!-- <ul class="nav navbar-nav"> -->
+	        <ul class="navbar-nav m-auto">
+    
 
       		@if (Session::get('isAdmin') == 'true')
       		<li class="nav-item active">
@@ -45,8 +43,8 @@
 		    </li>
 		    @else
 
-		     <li class="nav-item">
-		      <a class="nav-link" href="{{route('offhistory')}}">Officer History</a>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="{{route('crimehistory')}}">Criminal History</a>
 		    </li>
 		    <li class="nav-item">
 		      <a class="nav-link" href="{{route('addsuspect')}}">Add Suspect</a>
@@ -62,8 +60,9 @@
 		     <li class="nav-item">
 		      <a class="nav-link" href="{{route('v_evidences')}}">View Evidences</a>
 		    </li>
+		     
 		     <li class="nav-item">
-		      <a class="nav-link" href="{{route('crimehistory')}}">Criminal History</a>
+		      <a class="nav-link" href="{{route('offhistory')}}">Officer History</a>
 		    </li>
 		     <li class="nav-item">
 		      <a class="nav-link" href="{{route('logout')}}">Logout</a>

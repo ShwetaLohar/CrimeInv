@@ -74,7 +74,7 @@ class AddOfficerController extends Controller
 
 //;
         $to_email = $request->get('email');
-        $dataarr = array('officer_id'=> $officer_id,'password'=> $request->get('password'));
+        $dataarr = array('officer_id'=> $officer_id,'password'=> $request->get('password'),'username'=> $request->get('username'));
      
         \Mail::send('dynamic_email_template', $dataarr, function($message) use ($to_email) {
             $message->to($to_email)

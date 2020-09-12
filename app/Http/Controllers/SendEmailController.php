@@ -24,7 +24,8 @@ class SendEmailController extends Controller
 
     	$data = array(
     		'officer_id' =>$request->officer_id,
-    		'password'  =>$request->password
+    		'password'  =>$request->password,
+            
     	);
 
 

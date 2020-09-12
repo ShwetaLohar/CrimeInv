@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/flaticon.css">
     <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/icomoon.css">
     <link rel="stylesheet" href="{{ asset('frontEnd') }}/css/style.css">
+    <link rel="stylesheet" href="font/flaticon.css">
   </head>
   <body>
     
@@ -41,7 +42,7 @@
             <li class="nav-item"><a href="{{route('home')}}" class="nav-link">Home</a></li>
             <li class="nav-item active"><a href="{{route('about')}}" class="nav-link">About Us</a></li>
             
-            <li class="nav-item"><a href="{{route('news')}}" class="nav-link">News</a></li>
+            <li class="nav-item"><a href="https://www.indiatoday.in/crime" class="nav-link">News</a></li>
             <li class="nav-item" ><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
           </ul>
         </div>
@@ -49,7 +50,7 @@
     </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset('frontEnd') }}/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset('frontEnd') }}/images/ab.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -66,7 +67,7 @@
       <div class="container-fluid">
         <div class="row d-flex">
           <div class="col-md-6 d-flex">
-            <div class="img d-flex align-self-stretch align-items-center justify-content-center" style="background-image:url({{ asset('frontEnd') }}/images/about.jpg);">
+            <div class="img d-flex align-self-stretch align-items-center justify-content-center" style="background-image:url({{ asset('frontEnd') }}/images/ab2.jpg);">
               <!-- <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
                 <span class="icon-play"></span>
               </a> -->
@@ -75,20 +76,32 @@
           <div class="col-md-6 px-5 py-5">
             <div class="row justify-content-start pt-3 pb-3">
               <div class="col-md-12 heading-section ftco-animate">
-                <span class="subheading">Fun Facts</span>
-                <h2 class="mb-4">Whisper Lawfirm Stablished Since 1990</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                <span class="subheading">Criminal Facts</span>
+                <h2 class="mb-4">Preserving the peace of every citizen!</h2>
               </div>
             </div>
             <div class="row">
+
               <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
                 <div class="block-18 text-center py-4 bg-light mb-4">
                   <div class="text">
                     <div class="icon d-flex justify-content-center align-items-center">
-                      <span class="flaticon-lawyer"></span>
+                      <span class="flaticon-police-handcuffs"></span>
                     </div>
-                    <strong class="number" data-number="500">0</strong>
-                    <span>Qualified Lawyers</span>
+                    <strong class="number" data-number="1890">0</strong>
+                    <span>Crimes</span>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center py-4 bg-light mb-4">
+                  <div class="text">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                      <span class="flaticon-thief"></span>
+                    </div>
+                    <strong class="number" data-number="1963">0</strong>
+                    <span>Robbery</span>
                   </div>
                 </div>
               </div>
@@ -96,10 +109,10 @@
                 <div class="block-18 text-center py-4 bg-light mb-4">
                   <div class="text">
                     <div class="icon d-flex justify-content-center align-items-center">
-                      <span class="flaticon-handshake"></span>
+                      <span class="flaticon-car-accident"></span>
                     </div>
-                    <strong class="number" data-number="2000">0</strong>
-                    <span>Trusted Clients</span>
+                    <strong class="number" data-number="1632">0</strong>
+                    <span>Accidents</span>
                   </div>
                 </div>
               </div>
@@ -107,21 +120,10 @@
                 <div class="block-18 text-center py-4 bg-light mb-4">
                   <div class="text">
                     <div class="icon d-flex justify-content-center align-items-center">
-                      <span class="ion-ios-checkbox-outline"></span>
+                      <span class="flaticon-hostage"></span>
                     </div>
-                    <strong class="number" data-number="1500">0</strong>
-                    <span>Successful Cases</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center py-4 bg-light mb-4">
-                  <div class="text">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                      <span class="flaticon-medal"></span>
-                    </div>
-                    <strong class="number" data-number="100">0</strong>
-                    <span>Honors &amp; Awards</span>
+                    <strong class="number" data-number="8000">0</strong>
+                    <span>Kidnapping</span>
                   </div>
                 </div>
               </div>
@@ -136,7 +138,7 @@
       <center>
       
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   Copyright&copy; 2020 Shweta Lohar - All Rights Reserved<i class="icon-heart color-danger" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
+   Copyright&copy; 2020 Shweta Lohar - All Rights Reserved <i class="icon-heart color-danger" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
         </center>  
     </footer>

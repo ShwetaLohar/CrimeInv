@@ -20,6 +20,8 @@
           <h3 align="center">Login</h3><br />
           <h2></h2>
 
+         
+
           <form method="post" action="{{ url('/main/checklogin')}}">
             {{ csrf_field() }}
             <div class="form-group">

@@ -36,6 +36,7 @@ public function store(Request $request)
        $this->validate($request,[
                 'case_id' => 'required|numeric',
                 'evidence' => 'required|min:5|max:35',
+                'susp_id' => 'required|numeric',
                 'suspect' => 'required',
                 'note' => 'required|min:5|max:80',
                 'physical'=>'required|numeric',
@@ -48,6 +49,7 @@ public function store(Request $request)
             	
                 'case_id.required' => '*Please enter numeric values* ',
                 'evidence.required' => '*Please enter evidence* ',
+                'susp_id.required' => '*Please enter numeric values*',
                 'suspect.required' => '*Please enter suspect*',
                 'note.required' => '*Please enter note*',
                 'physical.required'=> '*Please enter physical score*',
@@ -63,6 +65,7 @@ public function store(Request $request)
             'physical' => $request->get('physical'),
             'logical' => $request->get('logical'),
             'case_id' => $request->get('case_id'),
+            'susp_id' => $request->get('susp_id'),
                     
         ]);
         $ae->save();

@@ -37,7 +37,7 @@
 				<select class="form-control" id="suspect" name="suspect"  required focus>
 					<option selected disabled="disabled" value="">--- Select Name ---</option>
 				@foreach (App\addsuspect::get() as $addsuspect)
-			    		<option value='{{ $addsuspect->suspect }}'>{{ $addsuspect->suspect }} </option>
+			    		<option value='{{ $addsuspect->suspect }}'>{{ $addsuspect->susp_id }} {{ $addsuspect->suspect }} </option>
 			    @endforeach
 				</select>
 				<span class="text-danger">{{ $errors->first('suspect') }}</span>

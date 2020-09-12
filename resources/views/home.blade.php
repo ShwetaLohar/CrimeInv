@@ -42,7 +42,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="{{route('about')}}" class="nav-link">About Us</a></li>
-	          <li class="nav-item"><a href="{{route('news')}}" class="nav-link">News</a></li>
+	          <li class="nav-item"><a href="https://www.indiatoday.in/crime" class="nav-link">News</a></li>
 	          <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -86,7 +86,7 @@
       <center>
       
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   Copyright&copy; 2020 Shweta Lohar - All Rights Reserved<i class="icon-heart color-danger" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
+   Copyright&copy; 2020 Shweta Lohar - All Rights Reserved <i class="icon-heart color-danger" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
         </center>  
     </footer>

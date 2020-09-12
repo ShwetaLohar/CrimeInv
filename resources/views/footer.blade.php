@@ -17,11 +17,11 @@
 
 
 
- <footer class="ftco-footer ftco-bg-dark ftco-section p-3 border border-top">
+ <!-- <footer class="ftco-footer ftco-bg-dark ftco-section p-3 border border-top">
       <center>
       
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
    Copyright&copy; 2020 Shweta Lohar - All Rights Reserved<i class="icon-heart color-danger" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.</p>
         </center>  
-    </footer>
+    </footer> -->

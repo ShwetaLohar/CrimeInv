@@ -41,7 +41,7 @@
 				<textarea class="form-control" rows="3" placeholder="Enter notes Here" name="note"></textarea> 
 				<span class="text-danger">{{ $errors->first('note') }}</span>
 			</div>
-			@if(count($errors) > 0)
+			<!-- @if(count($errors) > 0)
 			<div class="alert alert-danger">
 				<ul>
 				@foreach($errors->all() as $error)
@@ -49,7 +49,7 @@
 				@endforeach 
 				</ul>
 			</div>
-			@endif
+			@endif -->
 
 			@if(\Session::has('success'))
 				<div class="alert alert-success">

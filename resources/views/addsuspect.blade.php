@@ -11,7 +11,7 @@
              	<input type="hidden" name="_token" value="{{csrf_token() }}">
 
 			<div class="form-group {{ $errors->has('case_id') ? 'has-error' : '' }}"> 
-			     <label>Case ID</label>   
+			     <label>Case ID and Name</label>   
 			     <select class="form-control" id="case_id" name="case_id"  required focus>
 						<option selected disabled="disabled" value="">--- Select Case ID ---</option>
 				@foreach (App\addcase::get() as $addcase)

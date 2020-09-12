@@ -43,7 +43,7 @@ class MainController extends Controller
             if(Auth::user()->role_id == 1)
                 return redirect('/addcase');
             else
-                return redirect('/addsuspect');
+                return redirect('/crimehistory');
     	}
     	else
     	{
